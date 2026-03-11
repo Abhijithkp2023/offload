@@ -1,0 +1,18 @@
+// Main SCSS file
+// Import variables first
+@import 'variable';
+
+// Import mixins
+@import 'mixins';
+
+// Import common styles
+@import 'comon';
+
+// Import base styles
+@import 'base';
+
+// Home page component
+@import 'banner';
+
+// Import footer styles
+@import 'footer';
