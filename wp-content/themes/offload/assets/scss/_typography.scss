@@ -156,6 +156,7 @@
   --font-family-display: 'Kaneda Gothic', 'Industry', sans-serif;
 }
 
+
 html,
 body {
   font-optical-sizing: auto;
@@ -287,3 +288,14 @@ p {
   }
 }
 
+
+.banner-display-text {
+    font-family: 'Kaneda Gothic', 'Industry', sans-serif;
+    font-weight: 900;
+    font-style: italic;
+    font-size: 360px;
+    line-height: 100%;
+    letter-spacing: 0.03em;
+    color: #D9D9D9;
+  }
+  

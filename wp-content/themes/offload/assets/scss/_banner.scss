@@ -1,8 +1,108 @@
  
+.banner-hero {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: 60px 0;
+}
 
+.banner-hero__text {
+  position: relative;
+  z-index: 5;
+  width: 100%;
+  text-align: center;
+  pointer-events: none;
+}
 
+.banner-hero__media {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+}
 
- .bannerContainer{  height: 100vh; width: 100%; display: flex; flex-wrap: wrap; position: relative; background-size: cover; background-position: center; background-repeat: no-repeat; }
+.banner-media-item {
+  position: absolute;
+  display: block;
+  height: auto;
+  max-width: 100%;
+  z-index: 4;
+}
+
+.banner-hero__media img.banner-media-item:nth-child(3),
+.banner-hero__media img.banner-media-item:nth-child(8) {
+  z-index: 2;
+}
+
+.banner-hero__media img.banner-media-item:nth-child(1) {
+  top: 16%;
+  left: 10%;
+  width: clamp(30px, 3vw, 50px);
+}
+
+.banner-hero__media img.banner-media-item:nth-child(2) {
+  top: 20%;
+  left: 18%;
+  width: clamp(70px, 8vw, 140px);
+}
+
+.banner-hero__media img.banner-media-item:nth-child(3) {
+  top: 10%;
+  left: 38%;
+  width: clamp(80px, 9vw, 160px);
+}
+
+.banner-hero__media img.banner-media-item:nth-child(4) {
+  top: 22%;
+  left: 54%;
+  width: clamp(50px, 6vw, 120px);
+}
+
+.banner-hero__media img.banner-media-item:nth-child(5) {
+  top: 34%;
+  left: 24%;
+  width: clamp(90px, 10vw, 180px);
+}
+
+.banner-hero__media img.banner-media-item:nth-child(6) {
+  top: 18%;
+  right: 12%;
+  width: clamp(130px, 14vw, 220px);
+}
+
+.banner-hero__media img.banner-media-item:nth-child(7) {
+  bottom: 10%;
+  left: 12%;
+  width: clamp(140px, 16vw, 240px);
+}
+
+.banner-hero__media img.banner-media-item:nth-child(8) {
+  bottom: 6%;
+  right: 20%;
+  width: clamp(170px, 18vw, 280px);
+}
+
+.banner-hero__media img.banner-media-item:nth-child(9) {
+  bottom: 12%;
+  right: 8%;
+  width: clamp(150px, 16vw, 260px);
+}
+
+.banner-media-video {
+  position: absolute;
+  bottom: 4%;
+  left: 44%;
+  width: clamp(160px, 18vw, 280px);
+  border-radius: 6px;
+  object-fit: cover;
+  z-index: 4;
+}
+
+.bannerContainer{  height: 100vh; width: 100%; display: flex; flex-wrap: wrap; position: relative; background-size: cover; background-position: center; background-repeat: no-repeat; }
 
  .banner_txt_block_01{ width: 100%; margin-top: auto; padding-bottom: 15px; overflow: hidden;}
 
