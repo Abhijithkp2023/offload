@@ -57,21 +57,7 @@ img{ max-width: 100%; height: auto; display: block;}
   padding-left: 3%;
   padding-right: 3%;
   width: 100%;
-  max-width: calc(1400px + 6%);
-
-  &.max_1400 {
-    max-width: 1400px;
-
-  }
-  &.max_1200 {
-    max-width: 1200px;
-
-  }
-
-  @media (max-width: 1500px) {
-    padding-left: 3%;
-    padding-right: 3%;
-  }
+  max-width: calc(1670px + 6%);
 
   @media (max-width: 768px) {
     padding-left:4%;

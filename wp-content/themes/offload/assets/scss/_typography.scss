@@ -144,6 +144,24 @@
 
 @font-face {
   font-family: 'Kaneda Gothic';
+  src: url('../fonts/KanedaGothic-Medium.woff2') format('woff2'),
+    url('../fonts/KanedaGothic-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Kaneda Gothic';
+  src: url('../fonts/KanedaGothic-MediumItalic.woff2') format('woff2'),
+    url('../fonts/KanedaGothic-MediumItalic.woff') format('woff');
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Kaneda Gothic';
   src: url('../fonts/KanedaGothic-BlackItalic.woff2') format('woff2'),
     url('../fonts/KanedaGothic-BlackItalic.woff') format('woff');
   font-weight: 900;
@@ -167,18 +185,6 @@ body {
 
 html::selection {
   color: rgb(255, 255, 255);
-  background-color: rgb(0, 95, 139);
-}
-
-a {
-  text-decoration: none;
-  color: var(--darkBlue);
-  transition: all 0.3s ease;
-  cursor: pointer;
-}
-
-a:hover {
-  color: var(--lightBlue);
 }
 
 button {
@@ -290,12 +296,18 @@ p {
 
 
 .banner-display-text {
-    font-family: 'Kaneda Gothic', 'Industry', sans-serif;
-    font-weight: 900;
-    font-style: italic;
-    font-size: 360px;
-    line-height: 100%;
-    letter-spacing: 0.03em;
-    color: #D9D9D9;
-  }
-  
+  font-family: 'Kaneda Gothic', sans-serif;
+  font-weight: 900;
+  font-style: italic;
+  font-size: 360px;
+  line-height: 100%;
+  letter-spacing: 0.03em;
+  color: #D9D9D9;
+}
+
+.nav-cta-text {
+  font-family: 'Kaneda Gothic', sans-serif;
+  font-weight: 500;
+  font-style: italic;
+  font-size: 25px;
+}

@@ -10,14 +10,14 @@ $banner_images = isset($args['images']) && is_array($args['images']) ? $args['im
 $banner_video = isset($args['video']) && is_array($args['video']) ? $args['video'] : array();
 ?>
 
-<section class="banner-hero" aria-label="Homepage banner">
-    <div class="banner-hero__text">
-        <?php if (!empty($banner_title)): ?>
-            <h1 class="banner-display-text"><?php echo esc_html($banner_title); ?></h1>
-        <?php endif; ?>
-    </div>
+<section class="banner-hero wrap" aria-label="Homepage banner">
+    <div class="banner-hero__media">
+        <div class="banner-hero__text">
+            <?php if (!empty($banner_title)): ?>
+                <h1 class="banner-display-text"><?php echo esc_html($banner_title); ?></h1>
+            <?php endif; ?>
+        </div>
 
-    <div class="banner-hero__media" aria-hidden="true">
         <?php foreach ($banner_images as $image): ?>
             <?php
             $src = isset($image['src']) ? $image['src'] : '';
