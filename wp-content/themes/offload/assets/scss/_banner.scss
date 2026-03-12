@@ -7,6 +7,7 @@
    justify-content: center;
    overflow: hidden;
    padding: 60px 0;
+   opacity: 0;
  }
 
  .banner-hero__media {
@@ -22,6 +23,7 @@
    height: auto;
    max-width: 100%;
    z-index: 4;
+   opacity: 0;
  }
 
  .banner-hero__media .banner-hero__text {
@@ -58,6 +60,7 @@
    aspect-ratio: 140 / 205;
    max-width: 140px;
    z-index: 1;
+   
  }
 
  .banner-hero__media img.banner-media-item:nth-child(5) {
@@ -93,7 +96,7 @@
    bottom: 34%;
    right: 15.5%;
    aspect-ratio: 119 / 81;
-  //  transform: rotate(90deg);
+   //  transform: rotate(90deg);
    max-width: 119px;
  }
 
@@ -113,6 +116,7 @@
    max-width: 382px;
    object-fit: cover;
    z-index: 4;
+   opacity: 0;
  }
 
  .bannerContainer {

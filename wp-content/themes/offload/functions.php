@@ -182,7 +182,8 @@ function tasheel_scripts()
 		// Enqueue Banner script (if exists)
 		$banner_js_path = get_template_directory() . '/assets/js/Banner.js';
 		if (file_exists($banner_js_path)) {
-			wp_enqueue_script('banner-script', get_template_directory_uri() . '/assets/js/Banner.js', array(), _S_VERSION, true);
+			wp_enqueue_script('gsap', 'https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js', array(), '3.12.5', true);
+			wp_enqueue_script('banner-script', get_template_directory_uri() . '/assets/js/Banner.js', array('gsap'), _S_VERSION, true);
 		}
 	}
 

@@ -2997,6 +2997,7 @@ img {
   justify-content: center;
   overflow: hidden;
   padding: 60px 0;
+  opacity: 0;
 }
 
 .banner-hero__media {
@@ -3012,6 +3013,7 @@ img {
   height: auto;
   max-width: 100%;
   z-index: 4;
+  opacity: 0;
 }
 
 .banner-hero__media .banner-hero__text {
@@ -3100,6 +3102,7 @@ img {
   max-width: 382px;
   object-fit: cover;
   z-index: 4;
+  opacity: 0;
 }
 
 .bannerContainer {
