@@ -1,13 +1,6 @@
 :root {
   --lightBlue: #A3DBE8;
   --darkBlue: #002C5F;
-  /* 
-   * To reference images from CSS files in assets/css/:
-   * Use: url("../images/your-image.png")
-   * This works because CSS files are in assets/css/ and images are in assets/images/
-   * The "../" goes up one directory level from css/ to assets/, then into images/
-   */
-  --font-family: 'Poppins', sans-serif;
 }
 
 body {
@@ -22,34 +15,21 @@ body {
   margin: 0;
 }
 
+video,
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  transition: all 0.3s ease;
+}
+
 html,
 body {
   padding: 0;
   margin: 0;
-  font-optical-sizing: auto;
-  font-style: normal;
-  font-family: var(--font-family);
-  font-weight: 500;
   /* overflow-x: hidden; */
   scrollbar-width: none;
-}
-
-html::selection {
-  color: rgb(255, 255, 255);
-  background-color: rgb(0, 95, 139);
-}
-
-/* Links */
-a {
-  text-decoration: none;
-  color: var(--darkBlue);
-  /* color: inherit; */
-  transition: all 0.3s ease;
-  cursor: pointer;
-}
-
-a:hover {
-  color: var(--lightBlue);
 }
 
 a,
@@ -66,68 +46,218 @@ h6 {
   display: inline-block;
 }
 
-/* Buttons */
 button {
   border: none;
   cursor: pointer;
   transition: all 0.3s ease;
   background: transparent;
-  font: inherit;
 }
 
 button:focus {
   outline: none;
 }
 
-/* Inputs & Forms */
 input,
 textarea,
 select {
   border: none;
   outline: none;
-  font: inherit;
   background: transparent;
   width: 100%;
-  font-size: 16px;
   display: block;
   transition: all 0.3s ease;
 }
 
-video,
-img {
-  width: 100%;
-  height: auto;
-  display: block;
-  object-fit: cover;
-  transition: all 0.3s ease;
-}
-
-/* Lists */
 ul,
 li {
   list-style: none;
 }
 
-/* Headings */
+@font-face {
+  font-family: "Industry";
+  src: url("../fonts/Industry-Thin.woff2") format("woff2"), url("../fonts/Industry-Thin.woff") format("woff");
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Industry";
+  src: url("../fonts/Industry-ThinItalic.woff2") format("woff2"), url("../fonts/Industry-ThinItalic.woff") format("woff");
+  font-weight: 100;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Industry";
+  src: url("../fonts/Industry-Light.woff2") format("woff2"), url("../fonts/Industry-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Industry";
+  src: url("../fonts/Industry-LightItalic.woff2") format("woff2"), url("../fonts/Industry-LightItalic.woff") format("woff");
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Industry";
+  src: url("../fonts/Industry-Book.woff2") format("woff2"), url("../fonts/Industry-Book.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Industry";
+  src: url("../fonts/Industry-BookItalic.woff2") format("woff2"), url("../fonts/Industry-BookItalic.woff") format("woff");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Industry";
+  src: url("../fonts/Industry-Medium.woff2") format("woff2"), url("../fonts/Industry-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Industry";
+  src: url("../fonts/Industry-MediumItalic.woff2") format("woff2"), url("../fonts/Industry-MediumItalic.woff") format("woff");
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Industry";
+  src: url("../fonts/Industry-Demi.woff2") format("woff2"), url("../fonts/Industry-Demi.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Industry";
+  src: url("../fonts/Industry-DemiItalic.woff2") format("woff2"), url("../fonts/Industry-DemiItalic.woff") format("woff");
+  font-weight: 600;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Industry";
+  src: url("../fonts/Industry-Bold.woff2") format("woff2"), url("../fonts/Industry-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Industry";
+  src: url("../fonts/Industry-BoldItalic.woff2") format("woff2"), url("../fonts/Industry-BoldItalic.woff") format("woff");
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Industry";
+  src: url("../fonts/Industry-Black.woff2") format("woff2"), url("../fonts/Industry-Black.woff") format("woff");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Industry";
+  src: url("../fonts/Industry-BlackItalic.woff2") format("woff2"), url("../fonts/Industry-BlackItalic.woff") format("woff");
+  font-weight: 900;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Industry";
+  src: url("../fonts/Industry-Ultra.woff2") format("woff2"), url("../fonts/Industry-Ultra.woff") format("woff");
+  font-weight: 950;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Industry";
+  src: url("../fonts/Industry-UltraItalic.woff2") format("woff2"), url("../fonts/Industry-UltraItalic.woff") format("woff");
+  font-weight: 950;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Kaneda Gothic";
+  src: url("../fonts/KanedaGothic-BlackItalic.woff2") format("woff2"), url("../fonts/KanedaGothic-BlackItalic.woff") format("woff");
+  font-weight: 900;
+  font-style: italic;
+  font-display: swap;
+}
+:root {
+  --font-family-base: 'Industry', sans-serif;
+  --font-family-display: 'Kaneda Gothic', 'Industry', sans-serif;
+}
+
+html,
+body {
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-family: var(--font-family-base);
+  font-weight: 500;
+}
+
+html::selection {
+  color: rgb(255, 255, 255);
+  background-color: rgb(0, 95, 139);
+}
+
+a {
+  text-decoration: none;
+  color: var(--darkBlue);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+a:hover {
+  color: var(--lightBlue);
+}
+
+button {
+  font: inherit;
+}
+
+input,
+textarea,
+select {
+  font: inherit;
+  font-size: 16px;
+}
+
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-  font-weight: 600;
+  font-family: var(--font-family-display);
+  font-weight: 900;
+  font-style: italic;
   line-height: 1.2;
   margin-bottom: 20px;
-  font-family: var(--font-family);
 }
 
 p {
+  font-family: var(--font-family-base);
   font-size: 16px;
+  font-weight: 400;
   line-height: 1.5;
   margin: 0;
   margin-bottom: 20px;
   color: inherit;
-  font-family: var(--font-family);
+}
+
+.main,
+#newsletter-email {
+  font-family: var(--font-family-base);
 }
 
 @media screen and (max-width: 1600px) {
@@ -187,14 +317,6 @@ p {
     font-size: 50%;
   }
 }
-body {
-  font-family: "Poppins", sans-serif;
-}
-
-p {
-  font-weight: 400;
-}
-
 .z_10 {
   position: relative;
   z-index: 10;
@@ -412,10 +534,6 @@ img {
   -moz-transition: all 0.4s ease-out 0s;
   -webkit-transition: all 0.4s ease-out 0s;
   -o-transition: all 0.4s ease-out 0s;
-}
-
-.main, #newsletter-email {
-  font-family: "Readex Pro", system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 
 .wrap {

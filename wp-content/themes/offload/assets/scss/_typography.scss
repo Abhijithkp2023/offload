@@ -1,0 +1,289 @@
+@font-face {
+  font-family: 'Industry';
+  src: url('../fonts/Industry-Thin.woff2') format('woff2'),
+    url('../fonts/Industry-Thin.woff') format('woff');
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Industry';
+  src: url('../fonts/Industry-ThinItalic.woff2') format('woff2'),
+    url('../fonts/Industry-ThinItalic.woff') format('woff');
+  font-weight: 100;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Industry';
+  src: url('../fonts/Industry-Light.woff2') format('woff2'),
+    url('../fonts/Industry-Light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Industry';
+  src: url('../fonts/Industry-LightItalic.woff2') format('woff2'),
+    url('../fonts/Industry-LightItalic.woff') format('woff');
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Industry';
+  src: url('../fonts/Industry-Book.woff2') format('woff2'),
+    url('../fonts/Industry-Book.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Industry';
+  src: url('../fonts/Industry-BookItalic.woff2') format('woff2'),
+    url('../fonts/Industry-BookItalic.woff') format('woff');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Industry';
+  src: url('../fonts/Industry-Medium.woff2') format('woff2'),
+    url('../fonts/Industry-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Industry';
+  src: url('../fonts/Industry-MediumItalic.woff2') format('woff2'),
+    url('../fonts/Industry-MediumItalic.woff') format('woff');
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Industry';
+  src: url('../fonts/Industry-Demi.woff2') format('woff2'),
+    url('../fonts/Industry-Demi.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Industry';
+  src: url('../fonts/Industry-DemiItalic.woff2') format('woff2'),
+    url('../fonts/Industry-DemiItalic.woff') format('woff');
+  font-weight: 600;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Industry';
+  src: url('../fonts/Industry-Bold.woff2') format('woff2'),
+    url('../fonts/Industry-Bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Industry';
+  src: url('../fonts/Industry-BoldItalic.woff2') format('woff2'),
+    url('../fonts/Industry-BoldItalic.woff') format('woff');
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Industry';
+  src: url('../fonts/Industry-Black.woff2') format('woff2'),
+    url('../fonts/Industry-Black.woff') format('woff');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Industry';
+  src: url('../fonts/Industry-BlackItalic.woff2') format('woff2'),
+    url('../fonts/Industry-BlackItalic.woff') format('woff');
+  font-weight: 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Industry';
+  src: url('../fonts/Industry-Ultra.woff2') format('woff2'),
+    url('../fonts/Industry-Ultra.woff') format('woff');
+  font-weight: 950;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Industry';
+  src: url('../fonts/Industry-UltraItalic.woff2') format('woff2'),
+    url('../fonts/Industry-UltraItalic.woff') format('woff');
+  font-weight: 950;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Kaneda Gothic';
+  src: url('../fonts/KanedaGothic-BlackItalic.woff2') format('woff2'),
+    url('../fonts/KanedaGothic-BlackItalic.woff') format('woff');
+  font-weight: 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+:root {
+  --font-family-base: 'Industry', sans-serif;
+  --font-family-display: 'Kaneda Gothic', 'Industry', sans-serif;
+}
+
+html,
+body {
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-family: var(--font-family-base);
+  font-weight: 500;
+}
+
+html::selection {
+  color: rgb(255, 255, 255);
+  background-color: rgb(0, 95, 139);
+}
+
+a {
+  text-decoration: none;
+  color: var(--darkBlue);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+a:hover {
+  color: var(--lightBlue);
+}
+
+button {
+  font: inherit;
+}
+
+input,
+textarea,
+select {
+  font: inherit;
+  font-size: 16px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-family-display);
+  font-weight: 900;
+  font-style: italic;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+p {
+  font-family: var(--font-family-base);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  margin: 0;
+  margin-bottom: 20px;
+  color: inherit;
+}
+
+.main,
+#newsletter-email {
+  font-family: var(--font-family-base);
+}
+
+@media screen and (max-width:1600px) {
+  body,
+  html {
+    font-size: 80%;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin-bottom: 15px;
+  }
+
+  p {
+    margin-bottom: 15px;
+  }
+}
+
+@media screen and (max-width:1280px) {
+  body,
+  html {
+    font-size: 70%;
+  }
+}
+
+@media screen and (max-width:1024px) {
+  input {
+    font-size: 16px !important;
+  }
+}
+
+@media screen and (max-width:768px) {
+  body,
+  html {
+    font-size: 60%;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin-bottom: 10px;
+  }
+
+  p {
+    margin-bottom: 10px;
+  }
+
+  input {
+    font-size: 16px !important;
+  }
+}
+
+@media screen and (max-width:700px) {
+  input {
+    font-size: 16px !important;
+  }
+
+  body,
+  html {
+    font-size: 50%;
+  }
+}
+
