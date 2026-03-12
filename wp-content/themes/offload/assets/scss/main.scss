@@ -5,11 +5,17 @@
 // Import mixins
 @import 'mixins';
 
+// Global reset and base elements
+@import 'globals';
+
 // Import common styles
 @import 'comon';
 
 // Import base styles
 @import 'base';
+
+// Import header styles
+@import 'header';
 
 // Home page component
 @import 'banner';

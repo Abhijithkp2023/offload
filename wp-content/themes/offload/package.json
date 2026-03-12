@@ -36,9 +36,9 @@
     "map": false
   },
   "scripts": {
-    "watch": "node-sass assets/scss/ -o assets/css/ --source-map true --output-style expanded --indent-type tab --indent-width 1 -w",
-    "compile:css": "node-sass assets/scss/ -o assets/css/ --source-map true --output-style expanded",
-    "compile:header": "node-sass assets/scss/Header.scss -o assets/css/ --source-map true --output-style expanded",
+    "watch": "node-sass assets/scss/ -o assets/scss/ --source-map true --output-style expanded --indent-type tab --indent-width 1 -w",
+    "compile:css": "node-sass assets/scss/ -o assets/scss/ --source-map true --output-style expanded",
+    "compile:header": "node-sass assets/scss/Header.scss -o assets/scss/ --source-map true --output-style expanded",
     "compile:rtl": "rtlcss style.css style-rtl.css",
     "lint:scss": "wp-scripts lint-style 'assets/scss/**/*.scss'",
     "lint:js": "wp-scripts lint-js 'assets/js/*.js'",
