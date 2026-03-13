@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   if (video) {
-    gsap.set(video, { y: -1000, opacity: 0 });
+    gsap.set(video, { y: -1000, opacity: 1 });
   }
 
   const tl = gsap.timeline({ defaults: { ease: 'power3.out' } });

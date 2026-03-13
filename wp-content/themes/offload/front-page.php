@@ -54,10 +54,104 @@ $banner_data = array(
     ),
     'video' => array(
         'src' => $banner_assets . '/home_video.mp4',
-        'poster' => $banner_assets . '/video_thumb.png',
     ),
 );
 get_template_part('template-parts/Banner', null, $banner_data);
+?>
+
+<?php
+$brand_text = 'We connect the world of rugby through strategy, storytelling, and digital innovation — helping the game’s biggest names engage fans, grow audiences, and unlock new value.';
+$brand_assets = get_template_directory_uri() . '/assets/images';
+$brand_data = array(
+    'text' => $brand_text,
+    'logos' => array(
+        array(
+            'src' => $brand_assets . '/logo_01.png',
+            'alt' => 'Brand logo 1',
+        ),
+        array(
+            'src' => $brand_assets . '/logo_02.png',
+            'alt' => 'Brand logo 2',
+        ),
+        array(
+            'src' => $brand_assets . '/logo_03.png',
+            'alt' => 'Brand logo 3',
+        ),
+        array(
+            'src' => $brand_assets . '/logo_04.png',
+            'alt' => 'Brand logo 4',
+        ),
+        array(
+            'src' => $brand_assets . '/logo_05.png',
+            'alt' => 'Brand logo 5',
+        ),
+        array(
+            'src' => $brand_assets . '/logo_06.png',
+            'alt' => 'Brand logo 6',
+        ),
+        array(
+            'src' => $brand_assets . '/logo_07.png',
+            'alt' => 'Brand logo 7',
+        ),
+        array(
+            'src' => $brand_assets . '/logo_08.png',
+            'alt' => 'Brand logo 8',
+        ),
+    ),
+);
+?>
+
+<div class="pt_200 pb_300 tri-cut-bottom-right">
+    <?php get_template_part('template-parts/BrandGrid', null, $brand_data); ?>
+</div>
+<?php
+ $solutions_assets = get_template_directory_uri() . '/assets/images';
+ $solutions_data = array(
+     'title' => 'Solutions Across the Game:',
+     'cards' => array(
+         array(
+             'bg_color' => '#FFE089',
+             'hover_bg' => '#7E212B',
+             'text_color' => '#7A1F2B',
+             'heading' => 'Rights Holders',
+             'subheading' => 'Unions, Leagues, Clubs',
+             'outline' => 'Rights Holders',
+             'description' => 'Activate partnerships that fans care about and grow audiences with creative campaigns.',
+             'image' => $solutions_assets . '/img_001.png',
+         ),
+         array(
+             'bg_color' => '#FFB38E',
+             'hover_bg' => '#7E212B',
+             'text_color' => '#7A1F2B',
+             'heading' => 'Brands & Sponsors',
+             'subheading' => 'Partners & Activations',
+             'outline' => 'Brands & Sponsors',
+             'description' => 'Transform rights into innovative activations that connect with rugby’s community.',
+             'image' => $solutions_assets . '/img_002.png',
+         ),
+         array(
+             'bg_color' => '#E7E7EA',
+             'hover_bg' => '#7E212B',
+             'text_color' => '#2F3033',
+             'heading' => 'Athletes, Talent',
+             'subheading' => 'And Creators',
+             'outline' => 'Athletes & Talent',
+             'description' => 'Build personal brands and partnerships through story-led campaigns.',
+             'image' => $solutions_assets . '/img_003.png',
+         ),
+         array(
+             'bg_color' => '#3B5972',
+             'hover_bg' => '#7E212B',
+             'text_color' => '#B7C3CE',
+             'heading' => 'Media &',
+             'subheading' => 'Broadcasters',
+             'outline' => 'Media & Broadcast',
+             'description' => 'Create value for audiences with content, campaigns, and fan engagement.',
+             'image' => $solutions_assets . '/img_004.png',
+         ),
+     ),
+ );
+ get_template_part('template-parts/Solutions', null, $solutions_data);
 ?>
 
 <?php

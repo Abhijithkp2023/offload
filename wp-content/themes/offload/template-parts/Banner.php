@@ -31,10 +31,9 @@ $banner_video = isset($args['video']) && is_array($args['video']) ? $args['video
 
         <?php
         $video_src = isset($banner_video['src']) ? $banner_video['src'] : '';
-        $video_poster = isset($banner_video['poster']) ? $banner_video['poster'] : '';
         ?>
         <?php if (!empty($video_src)): ?>
-            <video class="banner-media-video" poster="<?php echo esc_url($video_poster); ?>" preload="none">
+            <video class="banner-media-video" autoplay muted loop playsinline preload="auto">
                 <source src="<?php echo esc_url($video_src); ?>" type="video/mp4">
             </video>
         <?php endif; ?>

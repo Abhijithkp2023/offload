@@ -185,6 +185,12 @@ function tasheel_scripts()
 			wp_enqueue_script('gsap', 'https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js', array(), '3.12.5', true);
 			wp_enqueue_script('banner-script', get_template_directory_uri() . '/assets/js/Banner.js', array('gsap'), _S_VERSION, true);
 		}
+
+		// Enqueue Solutions slider script
+		$solutions_js_path = get_template_directory() . '/assets/js/Solutions.js';
+		if (file_exists($solutions_js_path)) {
+			wp_enqueue_script('solutions-script', get_template_directory_uri() . '/assets/js/Solutions.js', array(), _S_VERSION, true);
+		}
 	}
 
 	if (is_singular() && comments_open() && get_option('thread_comments')) {

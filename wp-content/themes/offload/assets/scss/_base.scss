@@ -4,7 +4,9 @@
 @import "./variable";
 
 
-*{ box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 html,
 body {
@@ -19,22 +21,37 @@ body {
   scrollbar-width: none;
 }
 
-p{ font-size: 16px;
+p {
+  font-family: 'Industry', sans-serif;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: 3%;
+  font-size: 18px;
 
   @media screen and (max-width: 1024px) {
     font-size: 14px;
-    
+
   }
 }
 
 
 
-a{ text-decoration: none;}
-ul{
-  li{ list-style: none;}
+a {
+  text-decoration: none;
 }
 
-img{ max-width: 100%; height: auto; display: block;}
+ul {
+  li {
+    list-style: none;
+  }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
 
 
 
@@ -51,7 +68,7 @@ img{ max-width: 100%; height: auto; display: block;}
 
 
 .wrap {
-  
+
   margin-left: auto;
   margin-right: auto;
   padding-left: 3%;
@@ -60,8 +77,8 @@ img{ max-width: 100%; height: auto; display: block;}
   max-width: calc(1670px + 6%);
 
   @media (max-width: 768px) {
-    padding-left:4%;
-    padding-right:4%;
+    padding-left: 4%;
+    padding-right: 4%;
   }
 }
 
@@ -1278,6 +1295,18 @@ img{ max-width: 100%; height: auto; display: block;}
 
   @media #{$media-600} {
     padding-bottom: 110px;
+  }
+}
+
+.pb_300 {
+  padding-bottom: 300px;
+
+  @media #{$media-1024} {
+    padding-bottom: 200px;
+  }
+
+  @media #{$media-600} {
+    padding-bottom: 150px;
   }
 }
 
