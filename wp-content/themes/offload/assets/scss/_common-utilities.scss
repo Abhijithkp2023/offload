@@ -1,0 +1,109 @@
+.heading-alt-line,
+.heading-alt-line-invert,
+.heading-alt-word,
+.heading-alt-word-invert {
+    text-transform: uppercase;
+}
+
+.heading-line,
+.heading-word {
+    display: block;
+}
+
+.heading-line--alt,
+.heading-word--alt {
+    color: transparent;
+    -webkit-text-stroke: 2px currentColor;
+}
+
+.heading-alt-line-invert .heading-line,
+.heading-alt-word-invert .heading-word {
+    color: transparent;
+    -webkit-text-stroke: 2px currentColor;
+}
+
+.heading-alt-line-invert .heading-line--alt,
+.heading-alt-word-invert .heading-word--alt {
+    color: currentColor;
+    -webkit-text-stroke: 0;
+}
+
+.heading-alt-word .heading-line,
+.heading-alt-word-invert .heading-line {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.heading-alt-line--auto {
+    color: transparent;
+    -webkit-text-stroke: 2px #fff;
+    text-transform: uppercase;
+    white-space: pre-line;
+}
+
+.heading-alt-line--auto::first-line {
+    color: currentColor;
+    -webkit-text-stroke: 0;
+}
+
+.tri-cut-top-left,
+.tri-cut-top-right,
+.tri-cut-bottom-left,
+.tri-cut-bottom-right {
+    position: relative;
+    overflow: hidden;
+}
+
+.tri-cut-top-left::before,
+.tri-cut-top-right::before,
+.tri-cut-bottom-left::before,
+.tri-cut-bottom-right::before {
+    content: "";
+    position: absolute;
+    background-color: #000;
+    background-image: url('../images/dot.svg');
+    background-repeat: repeat;
+    background-size: 28px 28px;
+    background-position: 0 0;
+    z-index: 1;
+}
+
+.tri-cut-top-left::before {
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 280px;
+    clip-path: polygon(0 0, 100% 0, 0 100%);
+}
+
+.tri-cut-top-right::before {
+    top: 0;
+    right: 0;
+    width: 100vw;
+    height: 280px;
+    clip-path: polygon(0 0, 100% 0, 100% 100%);
+}
+
+.tri-cut-bottom-left::before {
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    height: 280px;
+    clip-path: polygon(0 100%, 0 0, 100% 100%);
+}
+
+.tri-cut-bottom-right::before {
+    bottom: 0;
+    right: 0;
+    width: 100vw;
+    height: 280px;
+    clip-path: polygon(0 100%, 100% 0, 100% 100%);
+}
+
+.bg-dots-dark {
+    background-image: url('../images/dot.svg');
+    background-repeat: repeat;
+    background-size: 28px 28px;
+    background-position: 0 0;
+}

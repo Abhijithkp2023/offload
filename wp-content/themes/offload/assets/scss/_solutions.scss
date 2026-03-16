@@ -1,0 +1,130 @@
+.solutions-section {
+    background-color: #0c0c0c;
+    color: #fff;
+}
+
+.solutions-title {
+    color: #fff;
+    margin: 0 0 40px;
+}
+
+.solutions-swiper {
+    overflow: hidden;
+    max-width: 1600px;
+}
+
+.solutions-card {
+    position: relative;
+    min-height: 484px;
+    padding: 40px 32px 32px;
+    color: var(--card-text);
+    overflow: hidden;
+}
+
+.solutions-card__bg {
+    position: absolute;
+    inset: 0;
+    background: var(--card-bg);
+    opacity: 1;
+    transition: opacity 0.4s ease, background-color 0.4s ease;
+    z-index: 0;
+}
+
+.solutions-card__content {
+    position: relative;
+    z-index: 2;
+}
+
+.solutions-card__arrow {
+    position: absolute;
+    top: 70px;
+    right: 70px;
+    width: 21px;
+    height: 21px;
+    color: currentColor;
+    transition: all 0.3s ease;
+}
+
+.solutions-card__arrow svg {
+    width: 100%;
+    height: 100%;
+}
+
+.solutions-card-heading,
+.solutions-card-subheading {
+    margin: 0;
+}
+
+.solutions-card-subheading {
+    margin-top: 4px;
+}
+
+.solutions-card-outline,
+.solutions-card-desc,
+.solutions-card__image {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.solutions-card-desc {
+    margin-top: 10px;
+}
+
+.solutions-card__image {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    opacity: 0;
+    z-index: 1;
+    transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.solutions-card:hover {
+    color: #fff;
+}
+
+.solutions-card:hover .solutions-card__bg {
+    background: var(--card-bg-hover);
+}
+
+.solutions-card:hover .solutions-card__arrow {
+    width: 42px;
+    height: 42px;
+    top: 35px;
+    right: 35px;
+}
+
+.solutions-card:hover .solutions-card-outline,
+.solutions-card:hover .solutions-card-desc,
+.solutions-card:hover .solutions-card__image {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.solutions-card:hover .solutions-card__image {
+    opacity: 0.3;
+}
+
+.solutions-card__image {
+    pointer-events: none;
+}
+
+.solutions-card-outline,
+.solutions-card-desc {
+    color: currentColor;
+}
+
+@media (max-width: 1200px) {
+    .solutions-title {
+        font-size: 72px;
+    }
+}
+
+@media (max-width: 900px) {
+    .solutions-title {
+        font-size: 56px;
+    }
+}

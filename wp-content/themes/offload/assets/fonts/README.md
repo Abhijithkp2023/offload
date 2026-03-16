@@ -4,11 +4,11 @@ Place your custom font files in this directory.
 
 ## Current Fonts:
 
-The theme currently includes **Raleway** font family with multiple weights and styles.
+The theme currently includes **Industry** (multiple weights/styles) and **Kaneda Gothic**.
 
 ## Font Files:
 
-All font files should be placed in: `/wp-content/themes/tasheel/fonts/`
+All font files should be placed in: `/wp-content/themes/offload/assets/fonts/`
 
 ## Supported Formats:
 

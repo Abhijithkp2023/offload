@@ -152,33 +152,16 @@ function tasheel_scripts()
 	wp_enqueue_style('swiper-css', 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css', array(), '11.0.0');
 	wp_enqueue_script('swiper-js', 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js', array(), '11.0.0', true);
 
-	// Enqueue main CSS (compiled from SCSS with mixins and variables)
+	// Enqueue main CSS (compiled from SCSS sources)
 	$main_css_path = get_template_directory() . '/assets/scss/main.css';
 	if (file_exists($main_css_path)) {
 		wp_enqueue_style('tasheel-main', get_template_directory_uri() . '/assets/scss/main.css', array(), _S_VERSION);
-	}
-
-	// Enqueue common CSS (common component styles)
-	$common_css_path = get_template_directory() . '/assets/css/common.css';
-	if (file_exists($common_css_path)) {
-		wp_enqueue_style('tasheel-common', get_template_directory_uri() . '/assets/css/common.css', array(), _S_VERSION);
 	}
 
 	// Enqueue main theme style
 	wp_enqueue_style('tasheel-style', get_stylesheet_uri(), array(), _S_VERSION);
 	wp_style_add_data('tasheel-style', 'rtl', 'replace');
 
-	// Enqueue Header component styles (loaded on all pages)
-	$header_css_path = get_template_directory() . '/assets/css/Header.css';
-	if (file_exists($header_css_path)) {
-		wp_enqueue_style('header-style', get_template_directory_uri() . '/assets/css/Header.css', array(), _S_VERSION);
-	}
-
-	// Enqueue Footer component styles (loaded on all pages)
-	$footer_css_path = get_template_directory() . '/assets/css/Footer.css';
-	if (file_exists($footer_css_path)) {
-		wp_enqueue_style('footer-style', get_template_directory_uri() . '/assets/css/Footer.css', array(), _S_VERSION);
-	}
 
 	// Enqueue main JS (global initialization)
 	$main_js_path = get_template_directory() . '/assets/js/main.js';
@@ -199,7 +182,14 @@ function tasheel_scripts()
 		// Enqueue Banner script (if exists)
 		$banner_js_path = get_template_directory() . '/assets/js/Banner.js';
 		if (file_exists($banner_js_path)) {
-			wp_enqueue_script('banner-script', get_template_directory_uri() . '/assets/js/Banner.js', array(), _S_VERSION, true);
+			wp_enqueue_script('gsap', 'https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js', array(), '3.12.5', true);
+			wp_enqueue_script('banner-script', get_template_directory_uri() . '/assets/js/Banner.js', array('gsap'), _S_VERSION, true);
+		}
+
+		// Enqueue Solutions slider script
+		$solutions_js_path = get_template_directory() . '/assets/js/Solutions.js';
+		if (file_exists($solutions_js_path)) {
+			wp_enqueue_script('solutions-script', get_template_directory_uri() . '/assets/js/Solutions.js', array(), _S_VERSION, true);
 		}
 	}
 
