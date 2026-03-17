@@ -59,7 +59,6 @@ $banner_data = array(
 get_template_part('template-parts/Banner', null, $banner_data);
 ?>
 
-<?php
 $brand_text = 'We connect the world of rugby through strategy, storytelling, and digital innovation — helping the game’s biggest names engage fans, grow audiences, and unlock new value.';
 $brand_assets = get_template_directory_uri() . '/assets/images';
 $brand_data = array(
@@ -194,9 +193,18 @@ $examples_data = array(
 <?php
 ?>
 
-<div class="pt_200 pb_300 tri-cut-top-right">
+<div class="pt_200 pb_135 tri-cut-top-right">
     <?php get_template_part('template-parts/Examples', null, $examples_data); ?>
 </div>
+
+<?php
+$inner_banner_assets = get_template_directory_uri() . '/assets/images';
+$inner_banner_data = array(
+    'title' => 'ABOUT <span>US</span>',
+    'bg_image' => $inner_banner_assets . '/about_banner.png',
+);
+get_template_part('template-parts/InnerBanner', null, $inner_banner_data);
+?>
 
 <?php
 get_footer();

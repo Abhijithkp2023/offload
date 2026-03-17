@@ -439,6 +439,21 @@ p {
   text-transform: uppercase;
 }
 
+.inner-banner-title {
+  font-family: "Kaneda Gothic", sans-serif;
+  font-weight: 900;
+  font-style: italic;
+  font-size: 208px;
+  line-height: 105%;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+.inner-banner-title span {
+  color: inherit;
+  -webkit-text-stroke: 2px currentColor;
+  -webkit-text-fill-color: transparent;
+}
+
 .z_10 {
   position: relative;
   z-index: 10;
@@ -3564,6 +3579,20 @@ img {
     flex: 0 1 100%;
   }
 }
+.inner-banner {
+  min-height: 597px;
+  display: flex;
+  align-items: flex-end;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  color: #fff;
+}
+
+.inner-banner__title {
+  margin: 0;
+}
+
 .solutions-section {
   background-color: #0c0c0c;
   color: #fff;
@@ -3722,6 +3751,8 @@ img {
   height: 100%;
   display: block;
   object-fit: cover;
+  position: relative;
+  z-index: 1;
 }
 
 .examples-card__title {
@@ -3734,8 +3765,9 @@ img {
 .examples-card__number {
   position: absolute;
   left: 58px;
-  bottom: 10px;
+  bottom: 40px;
   color: #fff;
+  z-index: 10;
 }
 
 .examples-card__subtitle {
@@ -3744,7 +3776,7 @@ img {
 }
 
 .examples-card__content {
-  padding-right: 150px;
+  padding-right: 125px;
 }
 
 .examples-card p {
@@ -3829,13 +3861,35 @@ img {
 }
 
 .clip-diagonal-tl {
-  --clip-size: 150px;
-  clip-path: polygon(var(--clip-size, 150px) 0, 100% 0, 100% 100%, 0 100%);
+  --clip-size: 140px;
+  clip-path: polygon(var(--clip-size, 140px) 0, 100% 0, 100% 100%, 0 100%);
 }
 
 .clip-diagonal-br {
-  --clip-size: 150px;
-  clip-path: polygon(0 0, 100% 0, calc(100% - var(--clip-size, 150px)) 100%, 0 100%);
+  --clip-size: 140px;
+  clip-path: polygon(0 0, 100% 0, calc(100% - var(--clip-size, 140px)) 100%, 0 100%);
+}
+
+.media-bg-decor {
+  position: relative;
+  padding-bottom: 22px;
+}
+
+.media-bg-decor::before {
+  content: "";
+  position: absolute;
+  width: 340px;
+  height: 462px;
+  top: auto;
+  left: auto;
+  right: 28px;
+  bottom: -22px;
+  background-image: url("../images/example bg.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  z-index: 0;
+  pointer-events: none;
 }
 
 .footer {

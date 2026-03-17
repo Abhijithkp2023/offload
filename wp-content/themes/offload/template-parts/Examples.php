@@ -31,7 +31,7 @@ $items = isset($args['items']) && is_array($args['items']) ? $args['items'] : ar
                     $image = isset($item['image']) ? $item['image'] : '';
                     ?>
                     <article class="examples-card">
-                        <div class="examples-card__media clip-diagonal-tl">
+                        <div class="examples-card__media clip-diagonal-tl media-bg-decor">
                             <?php if (!empty($image)): ?>
                                 <img class="examples-card__image clip-diagonal-br" src="<?php echo esc_url($image); ?>" alt="" loading="lazy" />
                             <?php endif; ?>

@@ -67,17 +67,39 @@
 }
 
 .clip-diagonal-tl {
-    --clip-size: 150px;
-    clip-path: polygon(var(--clip-size, 150px) 0,
+    --clip-size: 140px;
+    clip-path: polygon(var(--clip-size, 140px) 0,
             100% 0,
             100% 100%,
             0 100%);
 }
 
 .clip-diagonal-br {
-    --clip-size: 150px;
+    --clip-size: 140px;
     clip-path: polygon(0 0,
             100% 0,
-            calc(100% - var(--clip-size, 150px)) 100%,
+            calc(100% - var(--clip-size, 140px)) 100%,
             0 100%);
+}
+
+.media-bg-decor {
+    position: relative;
+    padding-bottom: 22px;
+}
+
+.media-bg-decor::before {
+    content: "";
+    position: absolute;
+    width: 340px;
+    height: 462px;
+    top: auto;
+    left: auto;
+    right: 28px;
+    bottom: -22px;
+    background-image: url("../images/example bg.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    z-index: 0;
+    pointer-events: none;
 }
