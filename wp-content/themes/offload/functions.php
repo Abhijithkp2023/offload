@@ -169,6 +169,15 @@ function tasheel_scripts()
 		wp_enqueue_script('tasheel-main', get_template_directory_uri() . '/assets/js/main.js', array(), _S_VERSION, true);
 	}
 
+	// Enqueue Lenis Smooth Scroll library (CDN) - loaded on all pages
+	wp_enqueue_script('lenis', 'https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js', array(), _S_VERSION, false);
+
+	// Enqueue smooth scroll initialization (loaded on all pages)
+	$smooth_scroll_path = get_template_directory() . '/assets/js/smooth-scroll.js';
+	if (file_exists($smooth_scroll_path)) {
+		wp_enqueue_script('smooth-scroll', get_template_directory_uri() . '/assets/js/smooth-scroll.js', array('lenis'), _S_VERSION, true);
+	}
+
 
 	// Enqueue Header component script (loaded on all pages)
 	$header_js_path = get_template_directory() . '/assets/js/Header.js';
