@@ -20,11 +20,33 @@
 		let isScrolled = false;
 		let isMenuOpen = false;
 		const isHomePage = document.body.classList.contains("home");
+		const logo = headerSection.querySelector(".navbar-brand");
+		const darkSections = Array.from(document.querySelectorAll(".dark_bg"));
 
 		// Show header immediately on non-home pages
 		if (!isHomePage) {
 			document.body.classList.add("header_visible");
 		}
+
+		/**
+		 * Toggle logo color when dark section reaches viewport top
+		 */
+		const updateLogoOnDarkSection = function () {
+			if (!logo || !darkSections.length) {
+				return;
+			}
+
+			let isDarkActive = false;
+			for (const section of darkSections) {
+				const rect = section.getBoundingClientRect();
+				if (rect.top <= 0 && rect.bottom > 0) {
+					isDarkActive = true;
+					break;
+				}
+			}
+
+			logo.classList.toggle("white", isDarkActive);
+		};
 
 		/**
 		 * Handle scroll event
@@ -41,6 +63,8 @@
 					headerSection.classList.remove("scrolled");
 				}
 			}
+
+			updateLogoOnDarkSection();
 		};
 
 		/**
@@ -79,9 +103,11 @@
 
 		// Check initial scroll position
 		handleScroll();
+		updateLogoOnDarkSection();
 
 		// Add scroll event listener
 		window.addEventListener("scroll", handleScroll, { passive: true });
+		window.addEventListener("resize", updateLogoOnDarkSection);
 
 		// Add menu toggle event listener
 		if (menuIcon) {

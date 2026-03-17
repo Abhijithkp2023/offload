@@ -119,6 +119,14 @@ img {
   max-width: 1500px;
 }
 
+.dark_bg {
+  background-color: #0c0c0c;
+}
+
+.gray_bg {
+  background-color: #EDEDED;
+}
+
 
 .buttion {
   outline: none;
@@ -1332,6 +1340,16 @@ img {
 
   @media #{$media-600} {
     padding-bottom: 110px;
+  }
+}
+
+.pt_300 {
+  padding-top: 300px;
+  @media #{$media-1024} {
+    padding-top: 200px;
+  }
+  @media #{$media-600} {
+    padding-top: 150px;
   }
 }
 

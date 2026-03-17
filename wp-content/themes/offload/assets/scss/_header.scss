@@ -1,5 +1,5 @@
 .header-main {
-  position: absolute;
+  position: fixed;
   width: 100%;
   top: 0;
   z-index: 100;
@@ -123,6 +123,7 @@
 
   &:hover {
     width: auto;
+
     &::before {
       width: 100%;
     }
@@ -218,6 +219,21 @@
   transform: translateX(0);
 }
 
+.navbar-brand {
+
+  img {
+    width: auto;
+    height: 60px;
+    object-fit: contain;
+  }
+
+  &.white {
+    img {
+      filter: brightness(0) invert(1);
+    }
+  }
+}
+
 .mobile_menu_list {
   list-style: none;
   padding: 0;
@@ -277,15 +293,10 @@
 }
 
 .header-inner-page {
+
   // Default inner page styles
   &.header-no-banner {
     position: relative !important;
     background: rgba(0, 0, 0, 0.6);
   }
-}
-
-.header-front-page {
-  // Front page specific styles
-  position: absolute !important;
-  background: transparent !important;
 }

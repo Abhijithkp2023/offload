@@ -1,0 +1,50 @@
+
+.platform-showcase__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.platform-showcase__content {
+    flex: 0 1 45%;
+}
+
+.platform-showcase__title {
+    margin: 0 0 20px;
+}
+
+.platform-showcase__description {
+    max-width: 520px;
+    margin: 0 0 30px;
+}
+
+.platform-showcase__link {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+    margin-bottom: 24px;
+}
+
+.platform-link-arrow {
+    display: inline-flex;
+}
+
+.platform-showcase__stores {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.platform-showcase__media {
+    flex: 0 1 55%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.platform-showcase__media img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}

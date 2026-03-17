@@ -454,6 +454,26 @@ p {
   -webkit-text-fill-color: transparent;
 }
 
+.platform-link-title {
+  font-family: "Industry", sans-serif;
+  font-weight: 700;
+  font-style: italic;
+  font-size: 19px;
+  line-height: 100%;
+  letter-spacing: 0.03em;
+  color: #7E212B;
+}
+
+.platform-link-text {
+  font-family: "Industry", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 15px;
+  line-height: 100%;
+  letter-spacing: 0.03em;
+  color: #2F3033;
+}
+
 .z_10 {
   position: relative;
   z-index: 10;
@@ -724,6 +744,14 @@ img {
 
 .inner_wrap {
   max-width: 1500px;
+}
+
+.dark_bg {
+  background-color: #0c0c0c;
+}
+
+.gray_bg {
+  background-color: #EDEDED;
 }
 
 .buttion {
@@ -2061,6 +2089,20 @@ img {
   }
 }
 
+.pt_300 {
+  padding-top: 300px;
+}
+@media only screen and (max-width: 1024px) {
+  .pt_300 {
+    padding-top: 200px;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .pt_300 {
+    padding-top: 150px;
+  }
+}
+
 .pb_300 {
   padding-bottom: 300px;
 }
@@ -2878,7 +2920,7 @@ img {
 }
 
 .header-main {
-  position: absolute;
+  position: fixed;
   width: 100%;
   top: 0;
   z-index: 100;
@@ -3089,6 +3131,15 @@ img {
   transform: translateX(0);
 }
 
+.navbar-brand img {
+  width: auto;
+  height: 60px;
+  object-fit: contain;
+}
+.navbar-brand.white img {
+  filter: brightness(0) invert(1);
+}
+
 .mobile_menu_list {
   list-style: none;
   padding: 0;
@@ -3146,11 +3197,6 @@ img {
 .header-inner-page.header-no-banner {
   position: relative !important;
   background: rgba(0, 0, 0, 0.6);
-}
-
-.header-front-page {
-  position: absolute !important;
-  background: transparent !important;
 }
 
 .banner-hero {
@@ -3594,7 +3640,6 @@ img {
 }
 
 .solutions-section {
-  background-color: #0c0c0c;
   color: #fff;
 }
 
@@ -3792,6 +3837,56 @@ img {
     flex: 1 1 calc(50% - 20px);
   }
 }
+.platform-showcase__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.platform-showcase__content {
+  flex: 0 1 45%;
+}
+
+.platform-showcase__title {
+  margin: 0 0 20px;
+}
+
+.platform-showcase__description {
+  max-width: 520px;
+  margin: 0 0 30px;
+}
+
+.platform-showcase__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  margin-bottom: 24px;
+}
+
+.platform-link-arrow {
+  display: inline-flex;
+}
+
+.platform-showcase__stores {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.platform-showcase__media {
+  flex: 0 1 55%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.platform-showcase__media img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
 .tri-cut-top-left,
 .tri-cut-top-right,
 .tri-cut-bottom-left,

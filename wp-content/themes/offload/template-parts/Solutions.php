@@ -9,7 +9,7 @@ $solutions_title = isset($args['title']) ? $args['title'] : '';
 $solutions_cards = isset($args['cards']) && is_array($args['cards']) ? $args['cards'] : array();
 ?>
 
-<section class="solutions-section bg-dots-dark pt_200 pb_300">
+<section class="solutions-section">
     <div class="wrap">
         <?php if (!empty($solutions_title)): ?>
             <h2 class="section-title heading-alt-line heading-alt-line--auto">

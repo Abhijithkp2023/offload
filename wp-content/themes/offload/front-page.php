@@ -151,8 +151,11 @@ $solutions_data = array(
         ),
     ),
 );
-get_template_part('template-parts/Solutions', null, $solutions_data);
 ?>
+
+<div class="dark_bg bg-dots-dark pt_200 pb_300">
+    <?php get_template_part('template-parts/Solutions', null, $solutions_data); ?>
+</div>
 
 <?php
 $examples_assets = get_template_directory_uri() . '/assets/images';
@@ -196,6 +199,35 @@ $examples_data = array(
 
 <div class="pt_200 pb_135 tri-cut-top-right">
     <?php get_template_part('template-parts/Examples', null, $examples_data); ?>
+</div>
+
+<?php
+$platform_assets = get_template_directory_uri() . '/assets/images';
+$platform_data = array(
+    'title' => 'All Things Rugby <br /><span>Our Fan Platform</span>',
+    'description' => 'All Things Rugby is our fan platform that sits at the heart of the Offload ecosystem. Designed to bring fans closer to the game through stories, experiences, and digital access that grow the sport we love.',
+    'link_url' => 'https://allthingsrugby.com',
+    'link_title' => 'allthingsrugby',
+    'link_text' => 'visit now',
+    'image' => $platform_assets . '/lap_img.png',
+    'store_badges' => array(
+        array(
+            'src' => $platform_assets . '/play_store.svg',
+            'alt' => 'Google Play',
+        ),
+        array(
+            'src' => $platform_assets . '/app_store.svg',
+            'alt' => 'App Store',
+        ),
+    ),
+);
+?>
+
+<?php
+?>
+
+<div class="gray_bg pt_300 pb_200 tri-cut-top-right-white tri-cut-top-right">
+    <?php get_template_part('template-parts/PlatformShowcase', null, $platform_data); ?>
 </div>
 
 <?php
