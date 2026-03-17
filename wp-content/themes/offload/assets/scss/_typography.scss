@@ -325,7 +325,7 @@ p {
   color: #7E212B;
 }
 
-.solutions-title {
+.section-title {
   font-family: 'Kaneda Gothic', sans-serif;
   font-weight: 900;
   font-style: italic;
@@ -333,7 +333,16 @@ p {
   line-height: 110%;
   letter-spacing: 0.03em;
   text-transform: uppercase;
+
+  span {
+    @include textOutline;
+  }
 }
+
+.section-title--thin-outline span {
+  @include textOutlineThin;
+}
+
 
 .solutions-card-heading {
   font-family: 'Kaneda Gothic', sans-serif;
@@ -360,4 +369,44 @@ p {
 
 .solutions-card-desc {
   letter-spacing: 0.03em;
+}
+
+.examples-title-text {
+  font-family: 'Kaneda Gothic', sans-serif;
+  font-weight: 900;
+  font-style: italic;
+  font-size: 48px;
+  line-height: 1.1;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.examples-number-text {
+  font-family: 'Kaneda Gothic', sans-serif;
+  font-weight: 900;
+  font-style: italic;
+  font-size: 128px;
+  line-height: 1;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.examples-subtitle-text {
+  font-family: 'Industry', sans-serif;
+  font-weight: 800;
+  font-style: italic;
+  font-size: 26px;
+  line-height: 1.4;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.examples-title {
+  font-family: 'Kaneda Gothic', sans-serif;
+  font-weight: 900;
+  font-style: italic;
+  font-size: 64px;
+  line-height: 1.1;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
 }

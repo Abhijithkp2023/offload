@@ -105,54 +105,98 @@ $brand_data = array(
     <?php get_template_part('template-parts/BrandGrid', null, $brand_data); ?>
 </div>
 <?php
- $solutions_assets = get_template_directory_uri() . '/assets/images';
- $solutions_data = array(
-     'title' => 'Solutions Across the Game:',
-     'cards' => array(
-         array(
-             'bg_color' => '#FFE089',
-             'hover_bg' => '#7E212B',
-             'text_color' => '#7A1F2B',
-             'heading' => 'Rights Holders',
-             'subheading' => 'Unions, Leagues, Clubs',
-             'outline' => 'Rights Holders',
-             'description' => 'Activate partnerships that fans care about and grow audiences with creative campaigns.',
-             'image' => $solutions_assets . '/img_001.png',
-         ),
-         array(
-             'bg_color' => '#FFB38E',
-             'hover_bg' => '#7E212B',
-             'text_color' => '#7A1F2B',
-             'heading' => 'Brands & Sponsors',
-             'subheading' => 'Partners & Activations',
-             'outline' => 'Brands & Sponsors',
-             'description' => 'Transform rights into innovative activations that connect with rugby’s community.',
-             'image' => $solutions_assets . '/img_002.png',
-         ),
-         array(
-             'bg_color' => '#E7E7EA',
-             'hover_bg' => '#7E212B',
-             'text_color' => '#2F3033',
-             'heading' => 'Athletes, Talent',
-             'subheading' => 'And Creators',
-             'outline' => 'Athletes & Talent',
-             'description' => 'Build personal brands and partnerships through story-led campaigns.',
-             'image' => $solutions_assets . '/img_003.png',
-         ),
-         array(
-             'bg_color' => '#3B5972',
-             'hover_bg' => '#7E212B',
-             'text_color' => '#B7C3CE',
-             'heading' => 'Media &',
-             'subheading' => 'Broadcasters',
-             'outline' => 'Media & Broadcast',
-             'description' => 'Create value for audiences with content, campaigns, and fan engagement.',
-             'image' => $solutions_assets . '/img_004.png',
-         ),
-     ),
- );
- get_template_part('template-parts/Solutions', null, $solutions_data);
+$solutions_assets = get_template_directory_uri() . '/assets/images';
+$solutions_data = array(
+    'title' => 'Solutions <br /><span>Across the Game:</span>',
+    'cards' => array(
+        array(
+            'bg_color' => '#FFE089',
+            'hover_bg' => '#7E212B',
+            'text_color' => '#7A1F2B',
+            'heading' => 'Rights Holders',
+            'subheading' => 'Unions, Leagues, Clubs',
+            'outline' => 'Rights Holders',
+            'description' => 'Activate partnerships that fans care about and grow audiences with creative campaigns.',
+            'image' => $solutions_assets . '/img_001.png',
+        ),
+        array(
+            'bg_color' => '#FFB38E',
+            'hover_bg' => '#7E212B',
+            'text_color' => '#7A1F2B',
+            'heading' => 'Brands & Sponsors',
+            'subheading' => 'Partners & Activations',
+            'outline' => 'Brands & Sponsors',
+            'description' => 'Transform rights into innovative activations that connect with rugby’s community.',
+            'image' => $solutions_assets . '/img_002.png',
+        ),
+        array(
+            'bg_color' => '#E7E7EA',
+            'hover_bg' => '#7E212B',
+            'text_color' => '#2F3033',
+            'heading' => 'Athletes, Talent',
+            'subheading' => 'And Creators',
+            'outline' => 'Athletes & Talent',
+            'description' => 'Build personal brands and partnerships through story-led campaigns.',
+            'image' => $solutions_assets . '/img_003.png',
+        ),
+        array(
+            'bg_color' => '#3B5972',
+            'hover_bg' => '#7E212B',
+            'text_color' => '#B7C3CE',
+            'heading' => 'Media &',
+            'subheading' => 'Broadcasters',
+            'outline' => 'Media & Broadcast',
+            'description' => 'Create value for audiences with content, campaigns, and fan engagement.',
+            'image' => $solutions_assets . '/img_004.png',
+        ),
+    ),
+);
+get_template_part('template-parts/Solutions', null, $solutions_data);
 ?>
+
+<?php
+$examples_assets = get_template_directory_uri() . '/assets/images';
+$examples_data = array(
+    'main_title' => 'EXAMPLES OF OUR WORK <br /><span>Across the world</span>',
+    'title_color' => '#7E212B',
+    'items' => array(
+        array(
+            'title' => 'Rights Holder',
+            'number' => '1',
+            'subtitle' => 'United Rugby Championship',
+            'subtitle_color' => '#7E212B',
+            'number_color' => '#FFA787',
+            'description' => 'We work with the URC team on content production, social media sponsorship strategy and partnership pipeline across a major airline partnership with Qatar Airways.',
+            'image' => $examples_assets . '/ex_01.jpg',
+        ),
+        array(
+            'title' => 'Sponsor and Event',
+            'number' => '2',
+            'subtitle' => 'Qatar Airways Cup',
+            'subtitle_color' => '#FFDF87',
+            'number_color' => '#FFDF87',
+            'description' => 'We delivered a breadth of sponsor led content and branded activations on ground, during and post game between Japan and South Africa at the Qatar Airways Cup in 2024.',
+            'image' => $examples_assets . '/ex_02.png',
+        ),
+        array(
+            'title' => 'Athlete and Talent',
+            'number' => '3',
+            'subtitle' => 'Sonny Bill Williams',
+            'subtitle_color' => '#3B5C74',
+            'number_color' => '#3B5C74',
+            'description' => 'We work with all Blacks icon Sonny Bill to deliver brand strategy, content creation and brand partnership deals.',
+            'image' => $examples_assets . '/ex_03.jpg',
+        ),
+    ),
+);
+?>
+
+<?php
+?>
+
+<div class="pt_200 pb_300 tri-cut-top-right">
+    <?php get_template_part('template-parts/Examples', null, $examples_data); ?>
+</div>
 
 <?php
 get_footer();

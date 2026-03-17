@@ -12,8 +12,8 @@ $solutions_cards = isset($args['cards']) && is_array($args['cards']) ? $args['ca
 <section class="solutions-section bg-dots-dark pt_200 pb_300">
     <div class="wrap">
         <?php if (!empty($solutions_title)): ?>
-            <h2 class="solutions-title heading-alt-line heading-alt-line--auto">
-                <?php echo esc_html($solutions_title); ?>
+            <h2 class="section-title heading-alt-line heading-alt-line--auto">
+                <?php echo wp_kses_post($solutions_title); ?>
             </h2>
         <?php endif; ?>
 

@@ -1,52 +1,3 @@
-.heading-alt-line,
-.heading-alt-line-invert,
-.heading-alt-word,
-.heading-alt-word-invert {
-    text-transform: uppercase;
-}
-
-.heading-line,
-.heading-word {
-    display: block;
-}
-
-.heading-line--alt,
-.heading-word--alt {
-    color: transparent;
-    -webkit-text-stroke: 2px currentColor;
-}
-
-.heading-alt-line-invert .heading-line,
-.heading-alt-word-invert .heading-word {
-    color: transparent;
-    -webkit-text-stroke: 2px currentColor;
-}
-
-.heading-alt-line-invert .heading-line--alt,
-.heading-alt-word-invert .heading-word--alt {
-    color: currentColor;
-    -webkit-text-stroke: 0;
-}
-
-.heading-alt-word .heading-line,
-.heading-alt-word-invert .heading-line {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 12px;
-}
-
-.heading-alt-line--auto {
-    color: transparent;
-    -webkit-text-stroke: 2px #fff;
-    text-transform: uppercase;
-    white-space: pre-line;
-}
-
-.heading-alt-line--auto::first-line {
-    color: currentColor;
-    -webkit-text-stroke: 0;
-}
-
 .tri-cut-top-left,
 .tri-cut-top-right,
 .tri-cut-bottom-left,
@@ -69,8 +20,15 @@
     z-index: 1;
 }
 
+.tri-cut-top-left-white::before,
+.tri-cut-top-right-white::before,
+.tri-cut-bottom-left-white::before,
+.tri-cut-bottom-right-white::before {
+    background-color: #fff;
+}
+
 .tri-cut-top-left::before {
-    top: 0;
+    top: -1px;
     left: 0;
     width: 100vw;
     height: 280px;
@@ -78,7 +36,7 @@
 }
 
 .tri-cut-top-right::before {
-    top: 0;
+    top: -1px;
     right: 0;
     width: 100vw;
     height: 280px;
@@ -86,7 +44,7 @@
 }
 
 .tri-cut-bottom-left::before {
-    bottom: 0;
+    bottom: -1px;
     left: 0;
     width: 100vw;
     height: 280px;
@@ -94,7 +52,7 @@
 }
 
 .tri-cut-bottom-right::before {
-    bottom: 0;
+    bottom: -1px;
     right: 0;
     width: 100vw;
     height: 280px;
@@ -106,4 +64,20 @@
     background-repeat: repeat;
     background-size: 28px 28px;
     background-position: 0 0;
+}
+
+.clip-diagonal-tl {
+    --clip-size: 150px;
+    clip-path: polygon(var(--clip-size, 150px) 0,
+            100% 0,
+            100% 100%,
+            0 100%);
+}
+
+.clip-diagonal-br {
+    --clip-size: 150px;
+    clip-path: polygon(0 0,
+            100% 0,
+            calc(100% - var(--clip-size, 150px)) 100%,
+            0 100%);
 }

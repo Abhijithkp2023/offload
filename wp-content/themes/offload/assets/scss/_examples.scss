@@ -1,0 +1,69 @@
+.examples-title {
+    margin: 0 0 40px;
+}
+
+.examples-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: stretch;
+}
+
+.examples-card {
+    flex: 1 1 calc(33.333% - 27px);
+    aspect-ratio: 512/696;
+    max-height: 696px;
+}
+
+.examples-card__media {
+    position: relative;
+    height: 696px;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+.examples-card__image {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.examples-card__title {
+    position: absolute;
+    top: 18px;
+    left: 170px;
+    color: #fff;
+}
+
+.examples-card__number {
+    position: absolute;
+    left: 58px;
+    bottom: 10px;
+    color: #fff;
+}
+
+
+.examples-card__subtitle {
+    margin: 0 0 12px;
+    color: #7e212b;
+}
+
+.examples-card__content {
+    padding-right: 150px;
+}
+
+.examples-card p {
+    margin: 0;
+    text-align: left;
+}
+
+@media (max-width: 1200px) {
+    .examples-grid {
+        gap: 30px;
+    }
+
+    .examples-card {
+        flex: 1 1 calc(50% - 20px);
+    }
+}
