@@ -35,6 +35,12 @@
     display: flex;
     align-items: center;
     gap: 16px;
+
+    img {
+        max-width: 151px;
+        height: auto;
+        display: block;
+    }
 }
 
 .platform-showcase__media {

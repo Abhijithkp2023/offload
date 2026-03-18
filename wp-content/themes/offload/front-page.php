@@ -231,14 +231,5 @@ $platform_data = array(
 </div>
 
 <?php
-$inner_banner_assets = get_template_directory_uri() . '/assets/images';
-$inner_banner_data = array(
-    'title' => 'ABOUT <span>US</span>',
-    'bg_image' => $inner_banner_assets . '/about_banner.png',
-);
-get_template_part('template-parts/InnerBanner', null, $inner_banner_data);
-?>
-
-<?php
 get_footer();
 
